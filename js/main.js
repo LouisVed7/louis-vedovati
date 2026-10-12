@@ -51,6 +51,11 @@ if (gallery && typeof GALLERIES !== "undefined") {
   b.addEventListener("click", () => { show(i); dlg.showModal(); });
   fig.appendChild(b);
   gallery.appendChild(fig);
+  if (gallery.dataset.breakAfter && i + 1 === Number(gallery.dataset.breakAfter)) {
+  const saut = document.createElement("div");
+  saut.className = "gallery-break";
+  gallery.appendChild(saut);
+  }
 });
 
   dlg.querySelector(".lb-close").addEventListener("click", () => dlg.close());
