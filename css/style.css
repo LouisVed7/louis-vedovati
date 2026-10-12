@@ -89,19 +89,38 @@ a { color: inherit; }
 .bio { text-align: center; max-width: 62ch; margin: 0 auto; font-size: 1.1rem; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.9; }
 .bio a { text-decoration: underline; text-underline-offset: 4px; }
 
-/* Galeries (mosaïque en ligne) */
+/* Galeries (mosaïque en ligne avec petits espaces) */
 .gallery { 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
-  align-items: start;
+  gap: 6px; /* <-- C'est ce chiffre qui crée le petit espace (essayez 4px, 6px ou 8px) */
 }
+
 .gallery figure { 
   margin: 0; 
+  width: 100%;
 }
-.gallery button { display: block; width: 100%; padding: 0; border: 0; background: #f2f2f2; cursor: zoom-in; }
-.gallery img { width: 100%; height: auto; transition: opacity .25s; }
-.gallery button:hover img { opacity: .88; }
+
+.gallery img { 
+  width: 100%; 
+  aspect-ratio: 4 / 3; /* Harmonise la taille de toutes les boîtes (format rectangulaire) */
+  object-fit: cover; /* Remplit la boîte sans déformer l'image (coupe légèrement les bords si besoin) */
+  transition: opacity .25s; 
+  display: block;
+}
+
+.gallery button { 
+  display: block; 
+  width: 100%; 
+  padding: 0; 
+  border: 0; 
+  background: transparent; 
+  cursor: zoom-in; 
+}
+
+.gallery button:hover img { 
+  opacity: .88; 
+}
 
 /* Lightbox */
 dialog.lightbox {
