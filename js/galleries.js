@@ -55,13 +55,13 @@ const GALLERIES = {
     ["GIT9.JPEG", "28 Janvier 2023, Genova, IT (9)"]
   ],
   exposition: [
-    ["PRELUDE.jpg", "Éloge – Le Cantique des Cantiques"],
-    ["CANTIQUE I.jpg", "Éloge – Le Cantique des Cantiques"],
-    ["CANTIQUE II.jpg", "Éloge – Le Cantique des Cantiques"],
-    ["CANTIQUE III.jpg", "Éloge – Le Cantique des Cantiques"],
-    ["CANTIQUE IV.jpg", "Éloge – Le Cantique des Cantiques"],
-    ["CANTIQUE V.jpg", "Éloge – Le Cantique des Cantiques"],
-    ["NOTEDOREE.jpeg", "Éloge – Le Cantique des Cantiques"],
+    ["prelude.jpg", "Éloge, Le Cantique des Cantiques"],
+    ["CANTIQUE I.jpg", "Éloge, Le Cantique des Cantiques"],
+    ["CANTIQUE II.jpg", "Éloge, Le Cantique des Cantiques"],
+    ["CANTIQUE III.jpg", "Éloge, Le Cantique des Cantiques"],
+    ["CANTIQUE IV.jpg", "Éloge, Le Cantique des Cantiques"],
+    ["CANTIQUE V.jpg", "Éloge, Le Cantique des Cantiques"],
+    ["notedore.jpeg", "Éloge, Le Cantique des Cantiques"],
     ["EX1.png", "Éloge, poésie par Louis Vedovati"],
     ["EX2.jpg", "Éloge, poésie par Louis Vedovati"]
   ]
