@@ -38,11 +38,20 @@
     <a class="logo" href="index.html" aria-label="Accueil"><img src="images/LOGO.png" alt="Logo Louis Vedovati"></a>
     <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <ul class="nav">
-      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html" aria-current="page">Accueil</a></li>
+      <li class="has-sub">
+        <button class="nav-trigger" type="button">À propos</button>
+        <ul class="submenu">
+          <li><a href="biographie.html">Biographie</a></li>
+          <li><a href="academique.html">Parcours académique</a></li>
+          <li><a href="professionnel.html">Parcours professionnel</a></li>
+        </ul>
+      </li>
+      <li><a href="articles.html" aria-current="page">Articles</a></li>
       <li class="has-sub">
         <button class="nav-trigger" type="button">Photographies</button>
         <ul class="submenu">
-          <li><a href="galerie.html" aria-current="page">Galerie</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
           <li><a href="nice.html">Nice, France</a></li>
           <li><a href="genova.html">Genova, Italia</a></li>
         </ul>
@@ -53,7 +62,6 @@
           <li><a href="exposition.html">Éloge, Nice, 27 Avril 2023</a></li>
         </ul>
       </li>
-      <li><a href="biographie.html">Biographie</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </header>
