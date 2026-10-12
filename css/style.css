@@ -89,9 +89,16 @@ a { color: inherit; }
 .bio { text-align: center; max-width: 62ch; margin: 0 auto; font-size: 1.1rem; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.9; }
 .bio a { text-decoration: underline; text-underline-offset: 4px; }
 
-/* Galeries (mosaïque) */
-.gallery { columns: 3 280px; column-gap: 16px; }
-.gallery figure { margin: 0 0 16px; break-inside: avoid; }
+/* Galeries (mosaïque en ligne) */
+.gallery { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+.gallery figure { 
+  margin: 0; 
+}
 .gallery button { display: block; width: 100%; padding: 0; border: 0; background: #f2f2f2; cursor: zoom-in; }
 .gallery img { width: 100%; height: auto; transition: opacity .25s; }
 .gallery button:hover img { opacity: .88; }
