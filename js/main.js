@@ -31,26 +31,27 @@ if (gallery && typeof GALLERIES !== "undefined") {
 
   const show = i => {
     current = (i + items.length) % items.length;
-    const [fichier, alt] = items[current];
+    const [fichier, legende, alt] = items[current];
     big.src = src(fichier);
-    big.alt = alt;
-    cap.textContent = alt;
+    big.alt = alt || legende;
+    cap.textContent = legende;
   };
 
-  items.forEach(([fichier, alt], i) => {
-    const fig = document.createElement("figure");
-    const b = document.createElement("button");
-    b.type = "button";
-    b.setAttribute("aria-label", alt ? `Agrandir : ${alt}` : "Agrandir la photo");
-    const img = document.createElement("img");
-    img.src = src(fichier);
-    img.alt = alt;
-    img.loading = "lazy";
-    b.appendChild(img);
-    b.addEventListener("click", () => { show(i); dlg.showModal(); });
-    fig.appendChild(b);
-    gallery.appendChild(fig);
-  });
+  items.forEach(([fichier, legende, alt], i) => {
+  const texteAlt = alt || legende;
+  const fig = document.createElement("figure");
+  const b = document.createElement("button");
+  b.type = "button";
+  b.setAttribute("aria-label", texteAlt ? `Agrandir : ${texteAlt}` : "Agrandir la photo");
+  const img = document.createElement("img");
+  img.src = src(fichier);
+  img.alt = texteAlt;
+  img.loading = "lazy";
+  b.appendChild(img);
+  b.addEventListener("click", () => { show(i); dlg.showModal(); });
+  fig.appendChild(b);
+  gallery.appendChild(fig);
+});
 
   dlg.querySelector(".lb-close").addEventListener("click", () => dlg.close());
   dlg.querySelector(".lb-prev").addEventListener("click", () => show(current - 1));
