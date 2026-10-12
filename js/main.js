@@ -80,9 +80,9 @@ if (form) {
         method: "POST", body: new FormData(form), headers: { Accept: "application/json" }
       });
       if (res.ok) { form.reset(); status.textContent = "Merci pour ce que vous avez envoyé !"; }
-      else { status.textContent = "Le message n'a pas pu être envoyé. Écrivez-moi à louisvedovati.lv@gmail.com."; }
+      else { status.textContent = "Le message n'a pas pu être envoyé. Écrivez-moi à louisvedovati@tutamail.com."; }
     } catch {
-      status.textContent = "Le message n'a pas pu être envoyé. Écrivez-moi à louisvedovati.lv@gmail.com.";
+      status.textContent = "Le message n'a pas pu être envoyé. Écrivez-moi à louisvedovati@tutamail.com.";
     }
   });
 }
