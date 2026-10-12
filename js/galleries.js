@@ -47,7 +47,7 @@ const GALLERIES = {
     ["GIT1.jpg", "28 Janvier 2023, Genova, IT (1)"],
     ["GIT2.jpg", "28 Janvier 2023, Genova, IT (2)"],
     ["GIT3.jpg", "28 Janvier 2023, Genova, IT (3)"],
-    ["GIT4.tiff", "28 Janvier 2023, Genova, IT (4)"],
+    ["GIT4.jpg", "28 Janvier 2023, Genova, IT (4)"],
     ["GIT5.jpg", "28 Janvier 2023, Genova, IT (5)"],
     ["GIT6.jpg", "28 Janvier 2023, Genova, IT (6)"],
     ["GIT7.jpg", "28 Janvier 2023, Genova, IT (7)"],
