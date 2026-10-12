@@ -31,19 +31,19 @@ if (gallery && typeof GALLERIES !== "undefined") {
 
   const show = i => {
     current = (i + items.length) % items.length;
-    const [id, ext, alt] = items[current];
-    big.src = src(id, ext, 2000);
+    const [fichier, alt] = items[current];
+    big.src = src(fichier);
     big.alt = alt;
     cap.textContent = alt;
   };
 
-  items.forEach(([id, ext, alt], i) => {
+  items.forEach(([fichier, alt], i) => {
     const fig = document.createElement("figure");
     const b = document.createElement("button");
     b.type = "button";
     b.setAttribute("aria-label", alt ? `Agrandir : ${alt}` : "Agrandir la photo");
     const img = document.createElement("img");
-    img.src = src(id, ext, 900);
+    img.src = src(fichier);
     img.alt = alt;
     img.loading = "lazy";
     b.appendChild(img);
