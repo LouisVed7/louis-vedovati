@@ -88,8 +88,11 @@
       </div>
     </div>
 
-    <!-- Galerie -->
-    <div class="gallery gallery--strip" data-gallery="exposition" data-break-after="7"></div>
+    <div class="slider-container">
+      <button class="slider-arrow slider-arrow-left" aria-label="Précédent">⟨</button>
+      <div class="gallery gallery--strip" data-gallery="exposition" data-break-after="7"></div>
+      <button class="slider-arrow slider-arrow-right" aria-label="Suivant">⟩</button>
+    </div>
 
     <!-- Section Immersion olfactive (Centrée avec bouton) -->
     <div class="expo-olfactive">
@@ -118,7 +121,25 @@
     </ul>
     <p>© 2026 par Louis Vedovati.</p>
   </footer>
-    
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const strip = document.querySelector('.gallery--strip');
+    const btnLeft = document.querySelector('.slider-arrow-left');
+    const btnRight = document.querySelector('.slider-arrow-right');
+
+    if(strip && btnLeft && btnRight) {
+      // Défilement vers la gauche
+      btnLeft.addEventListener('click', () => {
+        strip.scrollBy({ left: -400, behavior: 'smooth' }); 
+      });
+      // Défilement vers la droite
+      btnRight.addEventListener('click', () => {
+        strip.scrollBy({ left: 400, behavior: 'smooth' });
+      });
+    }
+  });
+</script>  
 <script src="js/galleries.js"></script>
 <script src="js/main.js"></script>
   
