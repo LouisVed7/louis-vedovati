@@ -26,14 +26,14 @@ const GALLERIES = {
     ["G22.jpg", "Trinquons"],
     ["G23.jpg", ""],
     ["G24.jpg", "Toujours plus de bruits"],
-    ["G25.jpg", "Tas de ferraille"]
+    ["G25.jpg", "Tas de ferraille"],
     ["G26.jpg", ""],
     ["G27.jpg", ""],
     ["G28.jpg", ""],
     ["G29.jpeg", ""],
     ["G30.jpeg", ""],
     ["G31.jpg", ""],
-    ["G32.jpg", ""],
+    ["G32.jpg", ""]
   ],
   nice: [
     ["N1.jpeg", ""],
