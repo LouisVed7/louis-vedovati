@@ -2,7 +2,7 @@
 // Les photos sont rangées dans images/<galerie>/ (galerie, nice, genova, exposition).
 const GALLERIES = {
   galerie: [
-    ["G1.JPEG", ""],
+    ["G1.JPEG", "La Brigue"],
     ["G2.JPG", ""],
     ["G3.JPG", ""],
     ["G4.jpg", ""],
