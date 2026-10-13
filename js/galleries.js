@@ -62,8 +62,6 @@ const GALLERIES = {
     ["CANTIQUE IV.jpg", "Éloge, Le Cantique des Cantiques"],
     ["CANTIQUE V.jpg", "Éloge, Le Cantique des Cantiques"],
     ["notedore.jpeg", "Éloge, Le Cantique des Cantiques"],
-    ["EX1.png", "Éloge, poésie par Louis Vedovati"],
-    ["EX2.jpg", "Éloge, poésie par Louis Vedovati"]
   ]
 };
 
