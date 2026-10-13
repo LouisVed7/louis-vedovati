@@ -140,11 +140,13 @@ a { color: inherit; }
   display: flex;
   flex-wrap: nowrap; 
   overflow-x: auto;  
-  gap: 10px;         
+  gap: 3px;
   padding-bottom: 16px; 
-  margin-bottom: 0; /* Géré par le slider-container */
+  margin-bottom: 0; 
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; 
+}
   
   /* Masque la barre de défilement */
   scrollbar-width: none; 
