@@ -127,7 +127,25 @@
     </ul>
     <p>© 2026 par Louis Vedovati.</p>
   </footer>
+ 
   <script src="js/main.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const strip = document.querySelector('.articles-strip');
+    const btnLeft = document.querySelector('.article-arrow-left');
+    const btnRight = document.querySelector('.article-arrow-right');
+
+    if(strip && btnLeft && btnRight) {
+      btnLeft.addEventListener('click', () => {
+        strip.scrollBy({ left: -340, behavior: 'smooth' }); 
+      });
+      btnRight.addEventListener('click', () => {
+        strip.scrollBy({ left: 340, behavior: 'smooth' });
+      });
+    }
+  });
+  </script>
+  
 </body>
   
 </html>
