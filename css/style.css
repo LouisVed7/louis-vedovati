@@ -232,6 +232,78 @@ a {
   display: block !important;
 }
 
+/*   DESIGN DE LA PAGE EXPOSITION            */
+/* Le fond rose et la disposition en 2 colonnes */
+.expo-intro {
+  background-color: var(--expo-bg, #fcf1f2);
+  padding: 60px 20px;
+  margin-bottom: 40px;
+}
+
+.expo-intro-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.expo-intro-left {
+  flex: 1 1 300px;
+}
+
+.expo-intro-left h1 {
+  color: var(--expo-fg, #d46b70);
+  margin: 0 0 10px 0;
+  text-align: left;
+}
+
+.expo-intro-right {
+  flex: 2 1 500px;
+}
+
+/* Les petites lignes décoratives */
+hr.short-line-left, 
+hr.short-line-center {
+  border: none;
+  border-top: 2px solid var(--expo-fg, #d46b70);
+  width: 50px;
+}
+hr.short-line-left { margin: 20px 0; }
+hr.short-line-center { margin: 20px auto; }
+
+/* La section olfactive (centrée) */
+.expo-olfactive {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Le bouton rose BOUCAN */
+.btn-boucan {
+  display: inline-block;
+  background-color: var(--expo-fg, #d46b70);
+  color: var(--expo-bg, #fcf1f2);
+  padding: 12px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  margin: 20px 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-boucan:hover {
+  opacity: 0.8;
+}
+
+/* Le logo du musée (pour qu'il ne soit pas géant) */
+.expo-logo {
+  max-width: 180px;
+  height: auto;
+  margin: 40px auto 0 auto;
+  display: block;
+}
+
 /* PAGE ARTICLES (GRILLE VITRINE) */
 .articles-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px; margin-top: 40px;
