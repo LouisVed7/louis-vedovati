@@ -275,7 +275,23 @@ dialog button:nth-of-type(3) {
   display: block;
 }
 .gallery--strip button {
-  height: 100%; width: auto; display: block; padding: 0; border: none; cursor: zoom-in;
+  display: block !important;
+  height: 100% !important;
+  width: 100% !important;
+  margin: 2 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  cursor: zoom-in;
+}
+
+.gallery--strip img {
+  display: block !important;
+  height: 100% !important;
+  width: auto !important;
+  margin: 2 !important;
+  padding: 0 !important;
+  object-fit: cover !important;
 }
 
 .slider-arrow {
@@ -318,14 +334,14 @@ dialog button:nth-of-type(3) {
   display: block !important;
 }
 
-/*   DESIGN DE LA PAGE EXPOSITION  */
-/* Le fond rose qui prend toute la largeur de l'écran */
+/* DESIGN DE LA PAGE EXPOSITION  */
+/* Le fond rose pleine largeur */
 .expo-intro {
   background-color: var(--expo-bg, #fcf1f2);
-  padding: 80px 20px;
+  padding: 80px 20px 100px 20px;
   margin-bottom: 40px;
+  color: var(--expo-fg, #d46b70); /* Force tout le texte de la zone en rose */
   
-/* L'astuce pour forcer la pleine largeur (comme votre bandeau noir d'articles) */
   width: 100vw;
   position: relative;
   left: 50%;
@@ -334,46 +350,84 @@ dialog button:nth-of-type(3) {
   margin-right: -50vw;
 }
 
-/* Les petites lignes décoratives */
-hr.short-line-left, 
+/* Le conteneur du texte : retour aux 2 colonnes */
+.expo-intro-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+/* Colonne de gauche (Titre, sous-titre, date) */
+.expo-intro-left {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+/* Le titre "Éloge" immense, en rose, et pas en majuscules forcées */
+.expo-intro-left h1 {
+  font-size: 5rem;
+  font-weight: 300;
+  color: var(--expo-fg, #d46b70) !important;
+  margin: 0 0 50px 0;
+  text-transform: none !important; /* Empêche de forcer "ÉLOGE" */
+  letter-spacing: normal;
+}
+
+.expo-intro-left p {
+  font-size: 1.15rem;
+  margin-bottom: 24px;
+  color: var(--expo-fg, #d46b70);
+}
+
+/* Colonne de droite (Paragraphes) */
+.expo-intro-right {
+  flex: 2 1 500px;
+  text-align: left;
+}
+
+.expo-intro-right p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  margin-bottom: 24px;
+  color: var(--expo-fg, #d46b70); /* Le texte est rose */
+}
+
+/* La petite ligne sous le texte à droite */
+hr.short-line-left {
+  border: none;
+  border-top: 1px solid var(--expo-fg, #d46b70);
+  width: 100px;
+  margin: 30px 0 0 0;
+}
+
 hr.short-line-center {
   border: none;
   border-top: 2px solid var(--expo-fg, #d46b70);
   width: 50px;
+  margin: 20px auto;
 }
-hr.short-line-left { margin: 20px 0; }
-hr.short-line-center { margin: 20px auto; }
 
-/* La section olfactive (centrée) */
+/* La section olfactive (centrée) en dessous */
 .expo-olfactive {
   text-align: center;
   padding: 40px 20px;
 }
 
-/* Le bouton rose BOUCAN bien arrondi */
+/* Le bouton rose BOUCAN (Arrondi "Pilule") */
 .btn-boucan {
   display: inline-block;
   background-color: var(--expo-fg, #d46b70);
   color: var(--expo-bg, #fcf1f2);
-  padding: 12px 35px;
+  padding: 14px 40px;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 0.1em;
   margin: 20px 0;
-  transition: opacity 0.3s ease;
   
-  border-radius: 50px; /* C'est cette ligne qui crée l'arrondi "pilule" */
-}
-
-/* Le logo du musée (pour qu'il ne soit pas géant) */
-.expo-logo {
-  max-width: 180px;
-  height: auto;
-  margin: 40px auto 0 auto;
-  display: block;
-}
-
 /* PAGE ARTICLES (GRILLE VITRINE) */
 .articles-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px; margin-top: 40px;
